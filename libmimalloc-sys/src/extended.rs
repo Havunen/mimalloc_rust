@@ -542,14 +542,14 @@ pub const mi_option_max_errors: mi_option_t = 19;
 /// Option (experimental)
 pub const mi_option_max_warnings: mi_option_t = 20;
 
-#[cfg(not(feature = "v3"))]
+#[cfg(feature = "v2")]
 /// Option (experimental)
 pub const mi_option_max_segment_reclaim: mi_option_t = 21;
 
 /// Last option.
-#[cfg(not(feature = "v3"))]
-pub const _mi_option_last: mi_option_t = 37;
-#[cfg(feature = "v3")]
+#[cfg(feature = "v2")]
+pub const _mi_option_last: mi_option_t = 38;
+#[cfg(not(feature = "v2"))]
 pub const _mi_option_last: mi_option_t = 43;
 
 extern "C" {
