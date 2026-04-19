@@ -1040,11 +1040,11 @@ extern "C" {
         perc_threshold: usize,
     ) -> bool;
 
-    #[cfg(feature = "v3")]
+    #[cfg(not(feature = "v2"))]
     /// Return the minimum size for an arena (v3 only).
     pub fn mi_arena_min_size() -> usize;
 
-    #[cfg(feature = "v3")]
+    #[cfg(not(feature = "v2"))]
     /// Equivalent to [`mi_heap_zalloc_small`], but for a thread-local heap (`theap`) in v3.
     ///
     /// `size` must be smaller or equal to [`MI_SMALL_SIZE_MAX`].
