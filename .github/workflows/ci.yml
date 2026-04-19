@@ -67,7 +67,7 @@ jobs:
         run: cargo test --features v2,secure
 
       - name: Test libmimalloc-sys crate bindings (v2, secure)
-        run: cargo run --features libmimalloc-sys-test/v3,libmimalloc-sys-test/secure -p libmimalloc-sys-test
+        run: cargo run --features libmimalloc-sys-test/v2,libmimalloc-sys-test/secure -p libmimalloc-sys-test
 
       - name: Build (v2, no secure)
         run: cargo build --features v2
