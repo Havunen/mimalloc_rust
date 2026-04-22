@@ -41,6 +41,7 @@ override = []
 extended = ["cty"]
 arena = []
 local_dynamic_tls = []
+win_init_use_tls_dllmain = []
 no_thp = []
 v2 = []
 

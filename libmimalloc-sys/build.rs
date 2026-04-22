@@ -51,6 +51,11 @@ fn main() {
         build.define("MI_SECURE", "4");
     }
 
+    if target_os == "windows" && env::var_os("CARGO_FEATURE_WIN_INIT_USE_TLS_DLLMAIN").is_some() {
+        // Force mimalloc's legacy Windows init path for targeted debugging.
+        build.define("MI_WIN_INIT_USE_TLS_DLLMAIN", "1");
+    }
+
     let dynamic_tls = env::var("CARGO_FEATURE_LOCAL_DYNAMIC_TLS").is_ok();
 
     if target_family == "unix" && target_os != "haiku" {

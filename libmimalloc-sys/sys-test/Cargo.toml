@@ -17,4 +17,5 @@ ctest2 = "0.4"
 [features]
 secure = ["libmimalloc-sys/secure"]
 extended = ["libmimalloc-sys/extended"]
+win_init_use_tls_dllmain = ["libmimalloc-sys/win_init_use_tls_dllmain"]
 v2 = ["libmimalloc-sys/v2"]

@@ -24,6 +24,14 @@
 //! [dependencies]
 //! mimalloc = { version = "*", features = ["secure"] }
 //! ```
+//!
+//! ## Windows TLS DllMain investigation
+//! For Windows-specific debugging, including ARM64 initialization issues, you can
+//! force mimalloc to compile with `-DMI_WIN_INIT_USE_TLS_DLLMAIN=1`:
+//! ```rust,ignore
+//! [dependencies]
+//! mimalloc = { version = "*", features = ["win_init_use_tls_dllmain"] }
+//! ```
 
 extern crate libmimalloc_sys as ffi;
 
