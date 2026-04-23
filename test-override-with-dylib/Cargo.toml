@@ -7,7 +7,7 @@ edition = "2018"
 publish = false
 
 [dependencies]
-libc = { version = "^0.2.8", default-features = false }
+libc = { version = "^0.2.186", default-features = false }
 libmimalloc-sys = { path = "../libmimalloc-sys" }
 
 [build-dependencies]
